@@ -1,7 +1,7 @@
 hyper-v-ps1-scripts
 ===================
 
-PowerShell scripts for Manage Windows Hyper-V Server 2012
+PowerShell scripts for Managing Windows Hyper-V Server 2012 R2
 
 
 
