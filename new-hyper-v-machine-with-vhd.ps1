@@ -20,7 +20,7 @@ $TestSwitch = Get-VMSwitch -Name $ExternalSwitch -ErrorAction SilentlyContinue; 
 New-VM -Name $NAME -Path $VMLOC -MemoryStartupBytes $RAMSIZE -VHDPath $VHDPATH -SwitchName $ExternalSwitch
 
 # Configure Virtual Machines
-Set-VMDvdDrive -VMName $NAME -Path $ISO
+# Set-VMDvdDrive -VMName $NAME -Path $ISO
 Set-VMProcessor -VMName $NAME -Count $CPUCount
 
 # The following line only make graphics worse
