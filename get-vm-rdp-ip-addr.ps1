@@ -21,5 +21,5 @@ $VmObj = Get-WmiObject -Namespace root\virtualization\v2 -Query "Select * From M
 $KvpObj = Get-WmiObject -Namespace root\virtualization\v2 -Query "Associators of {$VmObj} Where AssocClass=Msvm_SystemDevice ResultClass=Msvm_KvpExchangeComponent"
 
 
-# $KvpObj.GuestIntrinsicExchangeItems | Import-CimXml | where {$_.Name -eq "NetworkAddressIPv4" } | Foreach-Object {$_.Data}
+$KvpObj.GuestIntrinsicExchangeItems | Import-CimXml | where {$_.Name -eq "NetworkAddressIPv4" } | Foreach-Object {$_.Data}
 $KvpObj.GuestIntrinsicExchangeItems | Import-CimXml | where {$_.Name -eq "RDPAddressIPv4" } | Foreach-Object {$_.Data}
